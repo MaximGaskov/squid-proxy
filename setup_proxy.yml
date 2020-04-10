@@ -1,13 +1,6 @@
 - hosts: local
   gather_facts: no
   become: yes
-  vars_prompt:
-  - name: "sudo_pass"
-    prompt: "Enter sudo password"
-    unsafe: yes
-    private: yes
-  vars:
-    ansible_become_password: "{{ sudo_pass }}"
   tasks:
     - name: Install Squid
       apt:
