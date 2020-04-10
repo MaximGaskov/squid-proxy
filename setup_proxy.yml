@@ -28,6 +28,3 @@
       copy:
         src: "{{ playbook_dir }}/files/proxy.conf"
         dest: /etc/apt/apt.conf.d/proxy.conf
-        
-    - name: Set proxy environment variables
-      shell: "export http_proxy=127.0.0.1:3128 & export https_proxy=127.0.0.1:3128"
